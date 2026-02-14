@@ -211,7 +211,7 @@ def get_item_by_id_dfs_iterative(
         order: order in which to search
 
     Returns:
-        The FoundItem if found, None otherwise.
+        The FoundItem if found, None otherwise..
     """
     counter = 0
     match order:
@@ -228,7 +228,7 @@ def get_item_by_id_dfs_iterative(
 
                     for task in lab.tasks:
                         counter += 1
-                        if lab.id == item_id:
+                        if task.id == item_id:
                             return FoundItem(task, counter)
 
                         for step in task.steps:
